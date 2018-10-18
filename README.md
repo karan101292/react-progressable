@@ -1,9 +1,31 @@
 # React-Progressable
 A classic progressbar component for react. Lot to come yet...
 
+## Install
+```
+npm install --save react-progressable
+```
+
+## Usage
+```javascript
+import React, {Component} from 'react';
+import {ProgressBarClassic, ProgressCircleClassic} from "react-progressable";
+
+class ProgressBarComponent extends Component {
+    render(){
+         <div>
+            <ProgressBarClassic fill={80} />
+            <ProgressCircleClassic fill={80} />
+         </div>   
+    }
+}
+
+export default ProgressBarComponent;
+```
+
 # Progress-Bar Classic
 ![Progress-Bar Classic](https://i.imgur.com/9Sr5lx6.png)
-## Available Props:
+### Available Props:
 Prop Name | Prop Type | Default Value | Description
 ---|---|---|---
 background|`String`|`#eeeeee`|Background color for un-filled area
@@ -19,7 +41,7 @@ animateDuration|`Number`|`1`|Progress-bar animation duration in seconds
 
 # Progress-Circle Classic
 ![Progress-Circle Classic](https://i.imgur.com/LdEjNny.png)
-## Available Props:
+### Available Props:
 Prop Name | Prop Type | Default Value | Description
 ---|---|---|---
 background|`String`|`#eeeeee`|Background color for un-filled area
