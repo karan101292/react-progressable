@@ -1,0 +1,1 @@
+export { ProgressBarClassic } from './ProgressBarClassic';

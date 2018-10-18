@@ -1,0 +1,17 @@
+.reactprogressable__progressbar.outer{
+  width: 100%;
+  overflow: hidden;
+}
+.reactprogressable__progressbar.outer .inner{
+  height: 100%;
+  overflow: hidden;
+}
+.reactprogressable__progressbar.outer .inner .fill-text{
+  width: 96%;
+  margin: auto;
+  font-weight: bold;
+  text-align: right;
+  color: #fff;
+  display: block;
+  height: 100%;
+}
