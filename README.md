@@ -37,6 +37,9 @@ height|`Number`|`25`|Height of the progress-bar in px.
 borderRadius|`Number`|`0`|Border radius in px.
 animate|`Boolean`|`true`|Progress-bar animation toggle
 animateDuration|`Number`|`1`|Progress-bar animation duration in seconds
+stripes|`Boolean`|`false`|Stripe effect on progress-bar
+stripesAnimate|`Boolean`|`false`|Animate stripe effect
+stripesAnimateDirection|`String`|`left`|Animated stripe effect direction. 'right' or 'left'
 
 
 # Progress-Circle Classic
