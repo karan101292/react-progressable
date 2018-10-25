@@ -8,6 +8,7 @@
 .reactprogressable__progressbar.outer .inner{
   height: 100%;
   overflow: hidden;
+  background-color: #ff9a00;
 }
 .reactprogressable__progressbar.outer .inner .fill-text{
   width: 96%;
