@@ -1,26 +1,51 @@
 import React from "react";
-import { getStyleForInnerBar, getStyleForOuterBar, getStyleClassForInnerBar } from './styles.js';
+import { getStyleForInnerBar, getStyleForOuterBar, getStyleClassForInnerBar, getStyleForInnerBarMulti, getStyleForFillText } from './styles.js';
 import './index.css';
 
 const renderFillText = (props) => {
   return (
     <span
       className="reactprogressable__progressbar fill-text"
-      style={{lineHeight: `${props.height}px` ,...props.fillTextStyle, backgroundColor: 'transparent'}}>
+      style={getStyleForFillText(props)}>
         {props.fillText}
     </span>
   )
 }
 
-const ProgressBarClassic = (props) => {
-  const { height } = props;
+const renderFillTextMulti = (obj) => {
   return (
-    <div className="reactprogressable__progressbar outer" style={getStyleForOuterBar(props)}>
-      <div className={`reactprogressable__progressbar inner ${getStyleClassForInnerBar(props)}`} style={getStyleForInnerBar(props)}>
-        {renderFillText(props)}
+    <span
+      className="reactprogressable__progressbar fill-text"
+      style={getStyleForFillText(obj)}>
+        {obj.fillText}
+    </span>
+  )
+}
+
+const ProgressBarClassic = (props) => {
+  if(props.multi){
+    return (
+      <div className="reactprogressable__progressbar outer" style={getStyleForOuterBar(props)}>
+        {
+          props.multiFill.map((obj, index)=>{
+            return(
+              <div key={index} className={`reactprogressable__progressbar inner ${getStyleClassForInnerBar(props)}`} style={getStyleForInnerBarMulti(obj, props, index)}>
+                {renderFillTextMulti(obj)}
+              </div>
+            )
+          })
+        }
       </div>
-    </div>
-  );
+    );
+  }else{
+    return (
+      <div className="reactprogressable__progressbar outer" style={getStyleForOuterBar(props)}>
+        <div className={`reactprogressable__progressbar inner ${getStyleClassForInnerBar(props)}`} style={getStyleForInnerBar(props)}>
+          {renderFillText(props)}
+        </div>
+      </div>
+    );
+  }
 };
 
 ProgressBarClassic.defaultProps = {
@@ -35,7 +60,9 @@ ProgressBarClassic.defaultProps = {
   animateDuration: 1,
   stripes: false,
   stripesAnimate: false,
-  stripesAnimateDirection: 'left'
+  stripesAnimateDirection: 'left',
+  multi: false,
+  multiFill: []
 };
 
 export {ProgressBarClassic};

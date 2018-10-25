@@ -1,6 +1,9 @@
 .reactprogressable__progressbar.outer{
   width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .reactprogressable__progressbar.outer .inner{
   height: 100%;
