@@ -1,8 +1,8 @@
 {
   "name": "react-progressable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A classic progressbar component for react.",
-  "homepage": "https://github.com/karan101292/react-progressable/blob/master/README.md",
+  "homepage": "https://github.com/karan101292/react-progressable#readme",
   "repository": "https://github.com/karan101292/react-progressable",
   "main": "build/index.js",
   "scripts": {
@@ -11,9 +11,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "['react'",
-    "'progressbar'",
-    "'react-progressable']"
+    "react",
+    "progressbar",
+    "react-progressable"
   ],
   "author": "Karan Bhutwala",
   "license": "ISC",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",

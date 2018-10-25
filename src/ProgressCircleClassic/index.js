@@ -25,11 +25,11 @@ const ProgressCircleClassic = (props) => {
 ProgressCircleClassic.defaultProps = {
   background: '#EEE',
   fill: 0,
-  size: 150,
-  ringWidth: 7,
+  fillColor: '#ff9a00',
   fillText: '',
   fillTextStyle: {},
-  fillColor: 'orange',
+  size: 150,
+  ringWidth: 7,
 }
 
 export {ProgressCircleClassic};
